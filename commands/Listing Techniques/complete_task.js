@@ -1,14 +1,13 @@
 //Importing of necesary libraries and packages
 const mongodb1 = require('../../database/mongodb1');
-const { prefix } = require('../../config.json');
 const onethreefiveSchema = require('../../schemas/1-3-5-schema.js');
 
 ////Boiler-plate function to add exp to users
 module.exports = {
     name: 'complete135task',
-    description: 'List all of my commands or info about a specific command.',
+    description: 'Removes a specific task off of the user\'s 1-3-5 priority list.',
 	aliases: ['complete1-3-5task', 'completed1-3-5tasks', 'completed135tasks', 'complete135tasks', 'complete1-3-5tasks' ], //Psuedo-command that allows activation of code
-	usage: '!help [command name]',
+	usage: 'Use \'!complete135task medium 2\' to remove the second medium task off of the user\'s 1-3-5 list.',
     async execute(message, args) {
 
         await mongodb1().then(async (mongoose) => {

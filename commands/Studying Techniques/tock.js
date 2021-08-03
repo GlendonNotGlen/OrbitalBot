@@ -57,8 +57,8 @@ module.exports = {
         }
 
         //Default settings for Tock
-        const defaultWorkTime = ms('45s');
-        const defaultRestTime = ms('15s');
+        const defaultWorkTime = ms('45min');
+        const defaultRestTime = ms('15min');
         const baseExp = 180;
 
         //Scaling the alarm

@@ -58,8 +58,8 @@ module.exports = {
         }
 
         //Default settings for 52-17
-        const defaultWorkTime = ms('52s');
-        const defaultRestTime = ms('17s');
+        const defaultWorkTime = ms('52min');
+        const defaultRestTime = ms('17min');
         const baseExp = 208;
 
         //Scaling the alarm

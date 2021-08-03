@@ -1,14 +1,12 @@
 //Importing of necesary libraries and packages
 const mongodb1 = require('../../database/mongodb1');
-const { prefix } = require('../../config.json');
 const onethreefiveSchema = require('../../schemas/1-3-5-schema.js');
 
 ////Boiler-plate function to add exp to users
 module.exports = {
     name: 'show135',
-    description: 'List all of my commands or info about a specific command.',
+    description: 'Prints out the user\'s current 1-3-5 list.',
 	aliases: ['list1-3-5', 'list135', 'show1-3-5'], //Psuedo-command that allows activation of code
-	usage: '!help [command name]',
     async execute(message, args) {
         
         await mongodb1().then(async (mongoose) => {

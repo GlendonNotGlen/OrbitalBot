@@ -1,7 +1,7 @@
 //Importing of required library, packages. Importing of prefix and bot-token for activation of the app 
 const Discord = require("discord.js");
 const fs = require("fs");
-const { prefix, BOT_TOKEN, PASSWORD } = require("./config.json");
+//const { prefix, BOT_TOKEN, PASSWORD } = require("./config.json");
 const mongodb1 = require("./database/mongodb1");
 const addXp = require('./Boilerplate_Functions/AddXP');
 
@@ -36,7 +36,7 @@ client.on("ready", () => {
     if (message.author.bot) return;
 
   //gives exp for every message the user sends into the chat
-  if (!message.content.startsWith(prefix)){
+  if (!message.content.startsWith(process.env.prefix)){
    const randomXp = Math.floor(Math.random() * 14) + 1;
    addXp.execute(message.author.id, randomXp, message, true);
    return;
@@ -44,7 +44,7 @@ client.on("ready", () => {
 
    //stores the user's command in an array - args can be used for further customisation. 
    //Code below allows user to type in capital letters and even then, the commands should work.
-   const args = message.content.slice(prefix.length).trim().split(/ +/);
+   const args = message.content.slice(process.env.prefix.length).trim().split(/ +/);
    const commandName = args.shift().toLowerCase();
 
    //Get files that aligns with the command of user
@@ -84,4 +84,4 @@ const connectToMongoDB = async() => {
 
 connectToMongoDB();
 //Login and access bot using bot-token
-client.login(BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);

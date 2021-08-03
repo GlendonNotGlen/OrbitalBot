@@ -1,14 +1,13 @@
 //Importing of necesary libraries and packages
 const mongodb1 = require('../../database/mongodb1');
-const { prefix } = require('../../config.json');
 const quizcardSchema = require('../../schemas/quizcard-schema.js');
 
 ////Boiler-plate function to add exp to users
 module.exports = {
     name: 'createquizpackage',
-	description: 'List all of my commands or info about a specific command.',
+	description: 'Creates a quiz package for users.',
 	aliases: ['createquiz', 'createquizcards'], //Psuedo-command that allows activation of code
-	usage: '!help [command name]',
+	usage: 'Use \'!createquizpackage\' to activate our bot and instructions will be provided along the way.',
     async execute(message, args) {
         const questionfind = async (Answerlookout) =>{
                 

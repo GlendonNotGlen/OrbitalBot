@@ -1,13 +1,12 @@
 //Importing of necesary libraries and packages
 const mongodb1 = require('../../database/mongodb1');
-const { prefix } = require('../../config.json');
 const quizcardSchema = require('../../schemas/quizcard-schema.js');
 
 module.exports = {
     name: 'startquiz',
-    description: 'List all of my commands or info about a specific command.',
+    description: 'Activates the bot to begin one of the user\'s stored quiz cards.',
 	aliases: ['addquizzes' ], //Psuedo-command that allows activation of code
-	usage: '!help [command name]',
+	usage: 'Use \'!startquiz\' to begin our bot\'s programme. The bot will provide instructions along the way.',
     async execute(message, args) {
 
         const getRandomNumber = (max) => {return Math.floor(Math.random() * max)};

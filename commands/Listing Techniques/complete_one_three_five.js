@@ -5,9 +5,8 @@ const oneThreeFiveSchema = require('../../schemas/1-3-5-schema.js');
 ////Boiler-plate function to add exp to users
 module.exports = {
     name: 'complete1-3-5',
-    description: 'List all of my commands or info about a specific command.',
+    description: 'Removes the user\'s current 1-3-5 that is stored in the database.',
 	aliases: ['clear135', 'finish135'], //Psuedo-command that allows activation of code
-	usage: '!help [command name]',
     async execute(message, args) {
         
         await mongodb1().then(async (mongoose) => {

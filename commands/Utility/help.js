@@ -1,5 +1,5 @@
 //Importing of necesary libraries and packages
-const { prefix } = require('../../config.json');
+//const { prefix } = require('../../config.json');
 
 module.exports = {
 	//Sends a private message to the user on the list of commands or info about a command, preventing server spam
@@ -16,7 +16,7 @@ module.exports = {
 		if (!args.length) {
 			data.push('Here\'s a list of all my commands:');	//List of all commands
 			data.push(commands.map(command => command.name).join(', '));
-			data.push(`\nYou can send \`${prefix}help [command name]\` to get info on a specific command!`); //Guide on how to use bot
+			data.push(`\nYou can send \`${process.env.prefix}help [command name]\` to get info on a specific command!`); //Guide on how to use bot
 			
 			//If channel.type is direct message, DM the user and send him all the commands
 			return message.author.send('Here\'s a list of all my commands: \n   Study Techniques: !Pomodoro, !52-17, !Tock, !90Minutes \n   Music: !Play <Music Title>, !Skip, !Stop, !Leave \n   Level System: !Level, !Level <@TaggedPeer>, !Leaderboard \n   Games: !Reactiontype, !Snake \n   Utility: !Alarm, !Checkalarm, !Stopalarm, !Motivation, !To-do <task>, !list, !Delete <Task-Number>')

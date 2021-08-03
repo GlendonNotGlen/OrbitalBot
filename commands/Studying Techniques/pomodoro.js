@@ -58,8 +58,8 @@ module.exports = {
         }
 
         //Default settings for pomodoro
-        const defaultWorkTime = ms('2s');
-        const defaultRestTime = ms('2s');
+        const defaultWorkTime = ms('25min');
+        const defaultRestTime = ms('5min');
         const baseExp = 100;
 
         //Scaling the alarm

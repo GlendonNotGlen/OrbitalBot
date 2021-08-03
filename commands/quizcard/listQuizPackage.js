@@ -3,6 +3,7 @@ const quizcardSchema = require('../../schemas/quizcard-schema.js');
 
 module.exports = {
     name: 'listquizpackage',
+    description: 'Lists out all of the user\'s current quiz packages.',
     async execute(message, args) {
         await mongodb1().then(async (mongoose) => {
             try{

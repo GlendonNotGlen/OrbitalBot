@@ -15,7 +15,9 @@ module.exports = {
                 { name: 'Pomodoro', value: 'Type \'!pomodoro 1\' to start a 25 minutes session of studying, followed by 5 minutes of break', inline: true },
                 { name: '52-17', value: 'Type \'!52-17 1\' to start a 52 minutes session of studying, followed by 17 minutes of break', inline: true },
                 { name: 'Tock', value: 'Type \'!tock 1\' to start a 45 minutes session of studying, followed by 15 minutes of break', inline: true },
-                { name: '90minutes', value: 'Type \'!90minutes\' to start a 90 minutes session of studying, followed by 30 minutes of break', inline: true },
+                { name: '90minutes', value: 'Type \'!90minutes\' to start a 90 minutes session of studying, followed by 30 minutes of break. Note that this command is not scalable', inline: true },
+                { name: '1-3-5', value : 'Type \'!start135\' to begin increasing your productivity by choosing 1 Big Task, 3 Medium Tasks and 5 Small Tasks you would like to accomplish today.', inline: true},
+                { name: 'Quiz Cards', value : 'Create digital flash cards for yourself and master your contents through active recall. Create your first quiz card by using \'!createQuizPackage\' or \'!addQuiz\''},
             )
             .addField('\u200b', '\u200b')
             .addFields(

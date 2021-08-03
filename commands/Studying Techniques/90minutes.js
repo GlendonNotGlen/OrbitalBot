@@ -51,8 +51,8 @@ module.exports = {
         }
 
         //Default settings for 90-minutes
-        let timeStudying = ms('9s');
-        let timeResting = ms('3s');
+        let timeStudying = ms('90min');
+        let timeResting = ms('30min');
         const baseExp = 360;
 
         //saving information to store inside user profile for !checkalarm

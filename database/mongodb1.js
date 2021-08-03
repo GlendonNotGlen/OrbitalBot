@@ -1,5 +1,5 @@
 const mongodb1 = require('mongoose');
-const { prefix, BOT_TOKEN, PASSWORD, PATHWAY } = require("../config.json");
+//const { prefix, BOT_TOKEN, PASSWORD, PATHWAY } = require("../config.json");
 
 module.exports = 
     async ()=>{
@@ -13,7 +13,7 @@ module.exports =
             useFindAndModify: false
         };
 
-        await mongodb1.connect(PATHWAY, dbOptions);
+        await mongodb1.connect(process.env.PATHWAY, dbOptions);
         return mongodb1;
 
 

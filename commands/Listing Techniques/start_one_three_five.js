@@ -1,14 +1,12 @@
 //Importing of necesary libraries and packages
 const mongodb1 = require('../../database/mongodb1');
-const { prefix } = require('../../config.json');
 const oneThreeFiveSchema = require('../../schemas/1-3-5-schema.js');
 
 ////Boiler-plate function to add exp to users
 module.exports = {
     name: '1-3-5',
-    description: 'List all of my commands or info about a specific command.',
+    description: 'This command will begin the bot\'s programme to begin storing 1 Big Task, 3 Medium Tasks and 5 Small Tasks. The bot will provide instructions along the way.',
 	aliases: ['135', 'start1-3-5', 'start135' ], //Psuedo-command that allows activation of code
-	usage: '!help [command name]',
     async execute(message, args) {
         
         await mongodb1().then(async (mongoose) => {
