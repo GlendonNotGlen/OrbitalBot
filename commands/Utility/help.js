@@ -19,7 +19,7 @@ module.exports = {
 			data.push(`\nYou can send \`${process.env.prefix}help [command name]\` to get info on a specific command!`); //Guide on how to use bot
 			
 			//If channel.type is direct message, DM the user and send him all the commands
-			return message.author.send('Here\'s a list of all my commands: \n   Study Techniques: !Pomodoro, !52-17, !Tock, !90Minutes \n   Music: !Play <Music Title>, !Skip, !Stop, !Leave \n   Level System: !Level, !Level <@TaggedPeer>, !Leaderboard \n   Games: !Reactiontype, !Snake \n   Utility: !Alarm, !Checkalarm, !Stopalarm, !Motivation, !To-do <task>, !list, !Delete <Task-Number>')
+			return message.author.send('Here\'s a list of all my commands: \n   Study Techniques: !Pomodoro, !52-17, !Tock, !90Minutes \n   Music: !Play <Music Title>, !Skip, !Stop, !Leave \n   Level System: !Level, !Level <@TaggedPeer>, !Leaderboard \n   Games: !Reactiontype, !Snake \n   Utility: !Alarm, !Checkalarm, !Stopalarm, !Motivation, !To-do <task>, !list, !Delete <Task-Number>\n Quiz Card : !startQuiz, !addQuiz, !listQuizPackage, !createQuizPackage, !deleteQuizPackage \n Productivity: !start1-3-5, !show135, !delete135, !complete135task <small/medium/big> <task number>, !complete135')
 				.then(() => {
 					if (message.channel.type === 'dm') return;
 					return message.reply('I\'ve sent you a DM with all my commands!');

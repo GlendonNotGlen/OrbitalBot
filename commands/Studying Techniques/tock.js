@@ -67,8 +67,8 @@ module.exports = {
 
         //saving information to store inside user profile for !checkalarm
         let alarmID;
-        let alarmStart = moment().calendar();
-        let alarmEnd = moment().add(timeStudying, 'milliseconds').calendar();
+        let alarmStart = moment().subtract(16, 'hours').calendar(); //US-based hosting for Heroku
+        let alarmEnd = moment().add(timeStudying, 'milliseconds').subtract(16, 'hours').calendar();
 
         //Conversion of time to allow for javascript to handle 
         timeStudying = ms(timeStudying, { long: true });

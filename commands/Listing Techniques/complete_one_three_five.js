@@ -6,7 +6,7 @@ const oneThreeFiveSchema = require('../../schemas/1-3-5-schema.js');
 module.exports = {
     name: 'complete1-3-5',
     description: 'Removes the user\'s current 1-3-5 that is stored in the database.',
-	aliases: ['clear135', 'finish135'], //Psuedo-command that allows activation of code
+	aliases: ['clear135', 'finish135', 'complete135'], //Psuedo-command that allows activation of code
     async execute(message, args) {
         
         await mongodb1().then(async (mongoose) => {
