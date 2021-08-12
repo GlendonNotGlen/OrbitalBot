@@ -92,7 +92,7 @@ module.exports = {
                 message.channel.send('It\'s okay to take a break once in a while. Have plenty of rest! :heart:')
             }
             } finally {
-                
+                      mongoose.connection.close();
             }
             
         })
