@@ -1,8 +1,9 @@
-# Orbital21_GlenAndMingHuang
 Team name : Computing202
+
 Level of Achievement : Vostok
 
 Bot link : https://discord.com/oauth2/authorize?client_id=848902845310697482&scope=bot&permissions=8589934591 
+
 Motivation : 
 As students, we spend a large portion of our time studying for tests and exams. With productivity mobile applications, like Forest, rising in popularity in recent years, we believe that there is an educational space in the application realm currently left untapped. With proper market research, peer review and focus groups, our team has decided to launch a bot in Discord to tap into these spaces. Through a combination of elements typical of a productivity app, the incorporation of a Gamification system, and the integration of tools that aids in active recall, students will be able to utilise our Discord bot to start studying, maximise their productive hours, and learn about the wonders of our world in a safe space.
 
